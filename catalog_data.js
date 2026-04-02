@@ -63,3 +63,36 @@ const CATALOG_DATA = {
     ]
   }
 };
+
+const RECOMMENDATION_MAPPING = {
+  "Oil & Gas": {
+    "Centrifugal Pump": { categories: ["multi-spring", "single-spring"], keywords: ["carbon-face", "stainless"] },
+    "Agitator/Mixer": { categories: ["advanced", "multi-spring"], keywords: ["heavy-duty", "multi-spring"] },
+    "Compressor": { categories: ["advanced"], keywords: ["wave-spring"] },
+    "Submersible Pump": { categories: ["single-spring", "bellows"], keywords: ["o-ring", "carbon"] }
+  },
+  "Chemical Processing": {
+    "Centrifugal Pump": { categories: ["multi-spring", "single-spring"], keywords: ["ceramic-face", "stainless"] },
+    "Agitator/Mixer": { categories: ["advanced"], keywords: ["heavy-duty"] },
+    "Compressor": { categories: ["advanced"], keywords: ["wave-spring", "thin-design"] },
+    "Submersible Pump": { categories: ["bellows"], keywords: ["rubber", "stainless"] }
+  },
+  "Water Treatment": {
+    "Centrifugal Pump": { categories: ["single-spring"], keywords: ["brass", "carbon-face"] },
+    "Agitator/Mixer": { categories: ["multi-spring"], keywords: ["brass", "stainless"] },
+    "Compressor": { categories: ["advanced"], keywords: ["varied"] },
+    "Submersible Pump": { categories: ["bellows", "single-spring"], keywords: ["rubber-bellow", "brass"] }
+  },
+  "Pharmaceutical": {
+    "Centrifugal Pump": { categories: ["single-spring", "multi-spring"], keywords: ["stainless", "ceramic-face"] },
+    "Agitator/Mixer": { categories: ["advanced"], keywords: ["thin-design"] },
+    "Compressor": { categories: ["advanced"], keywords: ["wave-spring"] },
+    "Submersible Pump": { categories: ["single-spring"], keywords: ["stainless", "o-ring"] }
+  },
+  "Food & Beverage": {
+    "Centrifugal Pump": { categories: ["single-spring"], keywords: ["stainless", "ceramic-face"] },
+    "Agitator/Mixer": { categories: ["advanced", "multi-spring"], keywords: ["stainless", "thin-design"] },
+    "Compressor": { categories: ["advanced"], keywords: ["wave-spring"] },
+    "Submersible Pump": { categories: ["bellows"], keywords: ["rubber", "stainless"] }
+  }
+};

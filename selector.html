@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seal Selector | Hindustan Seal</title>
+    <meta name="description" content="AI-Powered Seal Precision Matcher - Find the perfect mechanical seal for your equipment.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Hindustan Seal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="selector.html">Seal Selector</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 mt-5">
+        <section id="selector-hero" class="text-center py-5">
+            <span class="badge rounded-pill bg-primary mb-3">Precision Engineering Tool</span>
+            <h1 class="display-4 fw-bold text-white mb-2">Seal Selection Assistant</h1>
+            <p class="lead text-secondary mx-auto mb-5" style="max-width: 600px;">
+                Input your operational parameters to identify the most suitable mechanical seal from our catalog.
+            </p>
+        </section>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Selector Form Card -->
+                <div class="card p-4 p-md-5 mb-5 shadow-lg border-primary border-opacity-25">
+                    <form id="seal-selector-form">
+                        <div class="mb-4">
+                            <label for="industry" class="form-label small fw-bold text-uppercase tracking-wider text-secondary">Primary Industry</label>
+                            <select class="form-select form-select-lg bg-dark text-white border-secondary border-opacity-25" id="industry" required>
+                                <option value="" disabled selected>Select an Industry</option>
+                                <option value="Oil & Gas">Oil & Gas</option>
+                                <option value="Chemical Processing">Chemical Processing</option>
+                                <option value="Water Treatment">Water Treatment</option>
+                                <option value="Pharmaceutical">Pharmaceutical</option>
+                                <option value="Food & Beverage">Food & Beverage</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="pump" class="form-label small fw-bold text-uppercase tracking-wider text-secondary">Target Equipment Type</label>
+                            <select class="form-select form-select-lg bg-dark text-white border-secondary border-opacity-25" id="pump" required>
+                                <option value="" disabled selected>Select Equipment</option>
+                                <option value="Centrifugal Pump">Centrifugal Pump</option>
+                                <option value="Agitator/Mixer">Agitator/Mixer</option>
+                                <option value="Compressor">Compressor</option>
+                                <option value="Submersible Pump">Submersible Pump</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow-sm mt-3">
+                            Analyze Catalog Matches
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-container" class="mt-5 d-none">
+            <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary border-opacity-10 pb-3">
+                <h2 class="h4 text-white mb-0 fw-bold">Recommended Solutions</h2>
+                <span id="match-count" class="badge rounded-pill bg-primary">0 matches</span>
+            </div>
+            
+            <div id="results-grid" class="row g-4">
+                <!-- Matches will be injected here -->
+            </div>
+
+            <div id="no-matches" class="text-center py-5 d-none">
+                <p class="text-secondary lead">No specific matches found for this combination. Please adjust your criteria or contact our engineers for a custom solution.</p>
+                <a href="contact.html" class="btn btn-outline-light rounded-pill px-4 mt-3">Contact Support</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-secondary py-5 mt-5 border-top border-secondary border-opacity-10">
+        <div class="container text-center">
+            <h4 class="text-white mb-4">Hindustan Seal</h4>
+            <ul class="list-inline mb-4">
+                <li class="list-inline-item"><a href="index.html" class="text-secondary text-decoration-none px-2 small link-light">Home</a></li>
+                <li class="list-inline-item"><a href="selector.html" class="text-secondary text-decoration-none px-2 small link-light">Selector</a></li>
+                <li class="list-inline-item"><a href="product.html" class="text-secondary text-decoration-none px-2 small link-light">Products</a></li>
+                <li class="list-inline-item"><a href="contact.html" class="text-secondary text-decoration-none px-2 small link-light">Contact</a></li>
+            </ul>
+            <p class="small mb-2 pt-3">Gala No. 106, Ashirwad Industrial Estate No. 3, Ram Mandir Road, Goregaon (W), Mumbai. 400104.</p>
+            <p class="small mb-4">Mobile: +91 9892168200 / 7021153758 | E-mail: hindustanseal@gmail.com</p>
+            <div class="border-top border-secondary border-opacity-10 pt-4 mt-4">
+                <p class="small mb-0">&copy; 2026 Hindustan Seal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="catalog_data.js"></script>
+    <script src="selector.js"></script>
+</body>
+
+</html>
