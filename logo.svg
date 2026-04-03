@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405 100">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&amp;family=Inter:wght@700&amp;display=swap');
+    .title { font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 44px; fill: #007a3e; letter-spacing: 0.01em; }
+    .sub { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 10px; fill: #ffffff; letter-spacing: 0.05em; }
+    .line { stroke: #e31e24; stroke-width: 2.5; }
+  </style>
+  <text x="5" y="45" class="title">HINDUSTAN SEAL</text>
+  <line x1="5" y1="60" x2="395" y2="60" class="line" />
+  <text x="5" y="78" class="sub">MANUFACTURER &amp; EXPORTER OF MECHANICAL SHAFT SEALS.</text>
+</svg>

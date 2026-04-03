@@ -1,8 +1,9 @@
 /* Hindustan Seal - Bootstrap Enhancements */
 :root {
-  --bs-primary: #2e7d32; /* Material Green 800 */
-  --bs-primary-rgb: 46, 125, 50;
-  --bs-body-bg: #0b1120;
+  --bs-primary: #007a3e; /* Original Industrial Green */
+  --bs-primary-rgb: 0, 122, 62;
+  --logo-red: #e31e24;
+  --bs-body-bg: #0b1120; /* Dark Slate Indigo (Reverted) */
   --bs-body-color: #f8fafc;
 }
 
@@ -10,6 +11,45 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Archivo', sans-serif;
+}
+
+/* Navbar Logo Brand */
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: var(--bs-primary) !important;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Navbar Logo Style */
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.02);
+}
+
+/* Ensure the subtext style doesn't conflict anymore as we use SVG */
+.logo-subtext {
+  display: none;
+}
+
+/* In dark navbar, we adjust subtext slightly but logo stays green */
+.navbar-dark .logo-subtext {
+  color: #fff;
+  filter: grayscale(1) brightness(2);
+}
+
 
 /* Background gradient to keep some character */
 body::before {
@@ -19,25 +59,24 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 80% 20%, rgba(46, 125, 50, 0.15), transparent 40%),
-              radial-gradient(circle at 20% 80%, rgba(105, 236, 72, 0.1), transparent 40%);
+  background: radial-gradient(circle at 80% 20%, rgba(0, 122, 62, 0.15), transparent 40%),
+              radial-gradient(circle at 20% 80%, rgba(0, 122, 62, 0.1), transparent 40%);
   z-index: -1;
 }
 
 /* Navbar transparency */
 .navbar.fixed-top {
   backdrop-filter: blur(10px);
-  background: rgba(15, 23, 42, 0.8) !important;
+  background: rgba(0, 0, 0, 0.95) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-brand {
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  background: linear-gradient(to right, #4caf50, #81c784);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--bs-primary) !important;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Premium Card (Extending Bootstrap .card) */
@@ -89,4 +128,120 @@ body::before {
 .btn-primary:hover {
   background-color: #2b6e30;
   border-color: #2b6e30;
+}
+
+/* Hero Slideshow Background */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  transform: scale(1);
+  filter: brightness(0.35) saturate(1.1); /* Darkened for text clarity */
+  z-index: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  animation: kenBurns 15s linear infinite alternate;
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* Ensure foreground content stays visible and navbar stays on top */
+#hero {
+  overflow: hidden;
+}
+
+#hero .container {
+  z-index: 10;
+}
+
+.navbar {
+  z-index: 1050;
+}
+
+/* Gear Interactive Section */
+#gear-root {
+  height: 400vh;
+  position: relative;
+  background: transparent;
+}
+
+#gear-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#card-area {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 58vh;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1;
+  perspective: 1000px; /* Enables 3D space */
+}
+
+.gcard {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px); /* Adds a modern frosted look */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  padding: 40px;
+  border-radius: 20px;
+  width: 340px;
+  text-align: center;
+  
+  /* Initial State: Dropped back and invisible */
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateZ(-100px) translateY(20px) rotateX(-10deg);
+  transition: 
+    opacity 0.6s ease, 
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), 
+    filter 0.6s ease;
+  
+  pointer-events: none;
+}
+
+.gcard h2 {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #4caf50; /* Match brand green */
+}
+
+.gcard.active {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateZ(0) translateY(0) rotateX(0deg);
+  pointer-events: all;
+}
+
+/* Add a subtle glow to the active phase title */
+.gcard.active h2 {
+  text-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+}
+
+#gear-wrap {
+  position: absolute;
+  bottom: -46vh;
+  left: 50%;
+  width: 92vh;
+  height: 92vh;
+  transform: translateX(-50%);
+  z-index: 2;
+  will-change: transform;
 }
