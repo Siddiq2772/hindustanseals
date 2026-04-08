@@ -1,12 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&amp;family=Inter:wght@700&amp;display=swap');
-    .title { font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 50px; fill: #ffffff; letter-spacing: 0.01em; stroke: rgba(0,0,0,0.3); stroke-width: 1px; paint-order: stroke fill; }
-    .sub { font-family: 'Inter', sans-serif; font-weight: 750; font-size: 14px; fill: #ffffff; letter-spacing: 0.05em; stroke: rgba(0,0,0,0.5); stroke-width: 0.3px; paint-order: stroke fill; }
-    .line { stroke: #06b6d4; stroke-width: 2.5; }
+    .title { font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 50px; fill: #007a3e; letter-spacing: 0.01em; }
+    /* Increased font-size to 14px */
+    .sub { font-family: 'Inter', sans-serif; font-weight: 750; font-size: 14px; fill: #ffffff; letter-spacing: 0.05em; }
+    .line { stroke: #e31e24; stroke-width: 2.5; }
   </style>
   
-  <text x="260" y="55" class="title" text-anchor="middle">HINDUSTAN SEAL</text>
-  <line x1="30" y1="65" x2="490" y2="65" class="line" />
-  <text x="260" y="85" class="sub" text-anchor="middle">MANUFACTURER &amp; EXPORTER OF MECHANICAL SHAFT SEALS.</text>
+  <text x="50%" y="45" class="title" text-anchor="middle">HINDUSTAN SEAL</text>
+
+  
+  <line x1="5" y1="60" x2="510" y2="60" class="line" />
+  
+  <text x="5" y="80" class="sub" textLength="100%"> MANUFACTURER &amp; EXPORTER OF MECHANICAL SHAFT SEALS.</text>
 </svg>
