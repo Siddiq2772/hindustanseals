@@ -229,13 +229,6 @@
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
-            
-            // Add a subtle parallax nudge to the text container
-            const heroContent = document.querySelector('#hero .container');
-            if (heroContent) {
-                heroContent.style.transition = 'transform 2s cubic-bezier(0.4, 0, 0.2, 1)';
-                heroContent.style.transform = `translateY(${Math.random() * 10 - 5}px) translateX(${Math.random() * 10 - 5}px)`;
-            }
         }, 5000);
     });
 

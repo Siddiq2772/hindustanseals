@@ -218,9 +218,9 @@ body::before {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(1.15); /* Start slightly zoomed for the reveal */
-  filter: brightness(0.58) saturate(1.1) blur(10px); /* Initial blur for transition */
+  transition: opacity 1.5s ease-in-out;
+  transform: scale(1);
+  filter: brightness(0.58) saturate(1.1);
   background-color: rgba(0, 0, 0, 0.38);
   background-blend-mode: multiply;
   z-index: 0;
@@ -228,14 +228,12 @@ body::before {
 
 .hero-slide.active {
   opacity: 1;
-  filter: brightness(0.58) saturate(1.1) blur(0px); /* Clear up when active */
-  transform: scale(1);
-  animation: cinematicReveal 20s linear infinite alternate;
+  animation: kenBurns 15s linear infinite alternate;
 }
 
-@keyframes cinematicReveal {
-  0% { transform: scale(1) translate(0, 0); }
-  100% { transform: scale(1.15) translate(-2%, -1%); }
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 
 #hero {
