@@ -51,8 +51,9 @@ h1, h2, h3, h4, .navbar-brand {
 
 /* Hero Logo Style (Dynamic Scaling) */
 .hero-logo {
-  height: clamp(75px, 12vw, 150px); /* Seamless growth from 75px to 150px based on screen width */
-  width: auto;
+  width: 500px; /* Ideal desktop width */
+  max-width: 90%; /* Prevents horizontal overflow on phones */
+  height: auto; /* Maintains the extremely wide aspect ratio */
   transition: transform 0.3s ease;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.05));
 }
