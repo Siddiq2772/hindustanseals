@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html" style="padding:0; border:none; background:none;"><img src="logo.svg" alt="Hindustan Seal" style="height: 55px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -47,7 +47,7 @@
                     <form id="seal-selector-form">
                         <div class="mb-4">
                             <label for="industry" class="form-label small fw-bold text-uppercase tracking-wider text-secondary">Primary Industry</label>
-                            <select class="form-select form-select-lg bg-dark text-white border-secondary border-opacity-25" id="industry" required>
+                            <select class="form-select form-select-lg bg-light text-dark border-secondary border-opacity-25" id="industry" required>
                                 <option value="" disabled selected>Select an Industry</option>
                                 <option value="Oil & Gas">Oil & Gas</option>
                                 <option value="Chemical Processing">Chemical Processing</option>
@@ -59,7 +59,7 @@
 
                         <div class="mb-4">
                             <label for="pump" class="form-label small fw-bold text-uppercase tracking-wider text-secondary">Target Equipment Type</label>
-                            <select class="form-select form-select-lg bg-dark text-white border-secondary border-opacity-25" id="pump" required>
+                            <select class="form-select form-select-lg bg-light text-dark border-secondary border-opacity-25" id="pump" required>
                                 <option value="" disabled selected>Select Equipment</option>
                                 <option value="Centrifugal Pump">Centrifugal Pump</option>
                                 <option value="Agitator/Mixer">Agitator/Mixer</option>
@@ -79,7 +79,7 @@
         <!-- Results Section -->
         <div id="results-container" class="mt-5 d-none">
             <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary border-opacity-10 pb-3">
-                <h2 class="h4 text-white mb-0 fw-bold">Recommended Solutions</h2>
+                <h2 class="h4 text-dark mb-0 fw-bold">Recommended Solutions</h2>
                 <span id="match-count" class="badge rounded-pill bg-primary">0 matches</span>
             </div>
             
@@ -94,9 +94,9 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-secondary py-5 mt-5 border-top border-secondary border-opacity-10" style="border-top: 4px solid var(--brand-green) !important;">
+    <footer class="bg-light text-dark py-5 mt-5 border-top border-dark border-opacity-10">
         <div class="container text-center">
-            <div class="mb-4 bg-white d-inline-block rounded p-1"><img src="logo.svg" alt="Hindustan Seal" style="height: 50px;"></div>
+            <div class="mb-4 d-inline-block rounded p-1"><img src="logo.svg" alt="Hindustan Seal" style="height: 50px;"></div>
             <ul class="list-inline mb-4">
                 <li class="list-inline-item"><a href="index.html" class="text-primary text-decoration-none px-2 small fw-bold">Home</a></li>
                 <li class="list-inline-item"><a href="selector.html" class="text-primary text-decoration-none px-2 small fw-bold">Selector</a></li>
