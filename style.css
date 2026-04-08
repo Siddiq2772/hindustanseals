@@ -51,11 +51,18 @@ h1, h2, h3, h4, .navbar-brand {
 
 /* Hero Logo Style (Dynamic Scaling) */
 .hero-logo {
-  width: 500px; /* Ideal desktop width */
-  max-width: 90%; /* Prevents horizontal overflow on phones */
-  height: auto; /* Maintains the extremely wide aspect ratio */
-  transition: transform 0.3s ease;
+  width: 720px; /* Enhanced desktop size for prominent branding */
+  max-width: 90%; /* Safe margin for tablets */
+  height: auto;
+  transition: all 0.3s ease;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.05));
+}
+
+@media (max-width: 576px) {
+  .hero-logo {
+    max-width: 98%; /* Maximizes size on phones */
+    transform: scale(1.05); /* Extra boost for 'large' appearance */
+  }
 }
 
 .hero-logo:hover {

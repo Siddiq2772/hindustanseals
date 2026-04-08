@@ -10,7 +10,7 @@
   <text x="50%" y="45" class="title" text-anchor="middle">HINDUSTAN SEAL</text>
 
   
-  <line x1="5" y1="60" x2="510" y2="60" class="line" />
+  <line x1="5" y1="60" x2="515" y2="60" class="line" />
   
-  <text x="5" y="80" class="sub" textLength="100%"> MANUFACTURER &amp; EXPORTER OF MECHANICAL SHAFT SEALS.</text>
+  <text x="50%" y="82" class="sub" text-anchor="middle">MANUFACTURER &amp; EXPORTER OF MECHANICAL SHAFT SEALS.</text>
 </svg>
