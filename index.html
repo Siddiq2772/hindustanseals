@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hindustan Seal | Premium Business Intro</title>
-    <meta name="description"
-        content="Manufacturer of Mechanical Seal for All types of Mechanical Seal">
+    <meta name="description" content="Manufacturer of Mechanical Seal for All types of Mechanical Seal">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html" style="padding:0; border:none; background:none;"><img src="logo.svg" alt="Hindustan Seal"></a>
+            <a class="navbar-brand" href="index.html" style="padding:0; border:none; background:none;"><img
+                    src="logo.svg" alt="Hindustan Seal"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,26 +40,42 @@
     </nav>
 
     <main class="container-fluid p-0 text-center m-0">
-        <section id="hero" class="w-100 py-5 d-flex flex-column align-items-center justify-content-center overflow-hidden">
-            <!-- Dynamic Slideshow Background -->
-            <div id="hero-slider" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 10;"></div>
-            
-            <div class="container position-relative" style="z-index: 10;">
-                <div class="d-flex justify-content-center mb-4">
+        <section id="hero">
+            <!-- Branding Panel (Top 30% on Desktop) -->
+            <div class="hero-branding">
+                <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-start">
                     <img src="logo-white.svg" alt="Hindustan Seal" class="hero-logo">
-                </div>
-                <p class="lead text-dark opacity-75 mx-auto mb-5" style="max-width: 600px;">
-                   Manufacturer of Mechanical Seal for All types of Mechanical Seal.
-                </p>
-                <div class="d-flex justify-content-center flex-row gap-3">
-                    <a href="selector.html" class="btn btn-primary px-3 px-sm-4 py-2 rounded-pill">Analyze Matches</a>
-                    <a href="product.html" class="btn btn-outline-light px-3 px-sm-4 py-2 rounded-pill">View Catalog</a>
+                    
+                    <div class="branding-content d-none d-lg-flex flex-column align-items-end">
+                        <p class="lead text-white opacity-75 mb-3">
+                            Manufacturer of Mechanical Seal for All types of Mechanical Seal.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="selector.html" class="btn btn-primary px-4 py-2 rounded-pill">Analyze Matches</a>
+                            <a href="product.html" class="btn btn-outline-light px-4 py-2 rounded-pill">View Catalog</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile only text -->
+                    <div class="d-lg-none mt-4 w-100">
+                        <p class="lead text-white opacity-75 mb-4">
+                            Manufacturer of Mechanical Seal for All types of Mechanical Seal.
+                        </p>
+                        <div class="d-flex flex-column gap-3">
+                            <a href="selector.html" class="btn btn-primary px-4 py-2 rounded-pill">Analyze Matches</a>
+                            <a href="product.html" class="btn btn-outline-light px-4 py-2 rounded-pill">View Catalog</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            
+            <!-- Dynamic Slideshow Background (Bottom 70% on Desktop) -->
+            <div id="hero-slider"></div>
         </section>
 
         <!-- Gear Interactive Section -->
-        
+
 
         <!-- About Us Section -->
         <section id="about" class="py-5 bg-white">
@@ -65,12 +83,16 @@
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 text-start">
                         <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary mb-3">Since 1998</span>
-                        <h2 class="display-5 fw-bold text-dark mb-4">Precision Sealing<br><span class="text-primary">Without Compromise</span></h2>
+                        <h2 class="display-5 fw-bold text-dark mb-4">Precision Sealing<br><span
+                                class="text-primary">Without Compromise</span></h2>
                         <p class="lead text-secondary mb-4">
-                            With over 25 years of excellence, Hindustan Seal is a leading manufacturer specializing in high-precision mechanical shaft seals for diverse industrial applications.
+                            With over 25 years of excellence, Hindustan Seal is a leading manufacturer specializing in
+                            high-precision mechanical shaft seals for diverse industrial applications.
                         </p>
                         <p class="text-secondary mb-5">
-                            Our Mumbai-based facility combines state-of-the-art manufacturing with rigorous quality audits. We provide sealing solutions that withstand the most demanding operational environments, from chemical processing to global water management infrastructure.
+                            Our Mumbai-based facility combines state-of-the-art manufacturing with rigorous quality
+                            audits. We provide sealing solutions that withstand the most demanding operational
+                            environments, from chemical processing to global water management infrastructure.
                         </p>
                         <div class="row g-4">
                             <div class="col-sm-6">
@@ -85,11 +107,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative">
-                            <img src="images/waterpumphouse/waterpump2.jpg" alt="Industrial Facility" class="img-fluid rounded-4 shadow-lg">
-                            <div class="position-absolute bottom-0 end-0 bg-primary p-4 rounded-4 m-4 d-none d-md-block shadow-lg">
-                                <p class="text-white fw-bold mb-0">ISO 9001:2015</p>
-                                <p class="text-white-50 small">Quality Certified</p>
-                            </div>
+                            <img src="images/waterpumphouse/waterpump2.jpg" alt="Industrial Facility"
+                                class="img-fluid rounded-4 shadow-lg">
                         </div>
                     </div>
                 </div>
@@ -100,18 +119,23 @@
         <section id="product-overview" class="py-5 bg-light">
             <div class="container py-5">
                 <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold text-dark">Our Precision <span class="text-primary">Seal Range</span></h2>
-                    <p class="text-secondary lead mx-auto" style="max-width: 700px;">Explore our comprehensive collection of industrial sealing solutions designed for durability and performance.</p>
+                    <h2 class="display-5 fw-bold text-dark">Our Precision <span class="text-primary">Seal Range</span>
+                    </h2>
+                    <p class="text-secondary lead mx-auto" style="max-width: 700px;">Explore our comprehensive
+                        collection of industrial sealing solutions designed for durability and performance.</p>
                 </div>
 
                 <!-- Product 1: Single Spring -->
                 <div class="row align-items-center mb-5 pb-5">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="catalog/1_Single_Spring_Seals/single-spring-seal-stainless-ceramic-face-conical-spring-001.jpg" alt="Single Spring Seals" class="img-fluid rounded-4 shadow">
+                        <img src="catalog/1_Single_Spring_Seals/single-spring-seal-stainless-ceramic-face-conical-spring-001.jpg"
+                            alt="Single Spring Seals" class="img-fluid rounded-4 shadow">
                     </div>
                     <div class="col-md-6 ps-md-5">
                         <h3 class="h2 fw-bold mb-3">Single Spring Seals</h3>
-                        <p class="text-secondary mb-4">Highly versatile and cost-effective, our single spring seals are designed for standard industrial applications. They offer reliable performance in handling clean or slightly contaminated media with ease of installation.</p>
+                        <p class="text-secondary mb-4">Highly versatile and cost-effective, our single spring seals are
+                            designed for standard industrial applications. They offer reliable performance in handling
+                            clean or slightly contaminated media with ease of installation.</p>
                         <a href="Single_spring_seals.html" class="btn btn-primary rounded-pill px-4">View Collection</a>
                     </div>
                 </div>
@@ -119,11 +143,14 @@
                 <!-- Product 2: Multi Spring (Inverted) -->
                 <div class="row align-items-center mb-5 pb-5 flex-md-row-reverse">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="catalog/3_Multi_Spring_Seals/multi-spring-seal-stainless-carbon-face-multi-spring-001.jpg" alt="Multi Spring Seals" class="img-fluid rounded-4 shadow">
+                        <img src="catalog/3_Multi_Spring_Seals/multi-spring-seal-stainless-carbon-face-multi-spring-001.jpg"
+                            alt="Multi Spring Seals" class="img-fluid rounded-4 shadow">
                     </div>
                     <div class="col-md-6 pe-md-5">
                         <h3 class="h2 fw-bold mb-3">Multi Spring Seals</h3>
-                        <p class="text-secondary mb-4">Engineered for precise pressure distribution, multi-spring seals provide superior stability and face alignment. Ideal for high-speed equipment where uniform loading is critical for longevity.</p>
+                        <p class="text-secondary mb-4">Engineered for precise pressure distribution, multi-spring seals
+                            provide superior stability and face alignment. Ideal for high-speed equipment where uniform
+                            loading is critical for longevity.</p>
                         <a href="Multi_spring_seals.html" class="btn btn-primary rounded-pill px-4">View Collection</a>
                     </div>
                 </div>
@@ -131,11 +158,14 @@
                 <!-- Product 3: Bellows Seals -->
                 <div class="row align-items-center mb-5 pb-5">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="catalog/2_Bellows_Seals/bellows-seal-rubber-bellow-stainless-steel-carbon-face-001.jpg" alt="Bellows Seals" class="img-fluid rounded-4 shadow">
+                        <img src="catalog/2_Bellows_Seals/bellows-seal-rubber-bellow-stainless-steel-carbon-face-001.jpg"
+                            alt="Bellows Seals" class="img-fluid rounded-4 shadow">
                     </div>
                     <div class="col-md-6 ps-md-5">
                         <h3 class="h2 fw-bold mb-3">Rubber Bellows Seals</h3>
-                        <p class="text-secondary mb-4">Featuring a flexible bellows design, these seals compensate for shaft misalignment and vibration. They are extensively used in the water management and agricultural sectors for their ruggedness.</p>
+                        <p class="text-secondary mb-4">Featuring a flexible bellows design, these seals compensate for
+                            shaft misalignment and vibration. They are extensively used in the water management and
+                            agricultural sectors for their ruggedness.</p>
                         <a href="Bellows_seals.html" class="btn btn-primary rounded-pill px-4">View Collection</a>
                     </div>
                 </div>
@@ -143,12 +173,16 @@
                 <!-- Product 4: Advanced Specialty (Inverted) -->
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="catalog/4_Advanced_Specialty_Seals/specialty-seal-multi-type-collection-001.jpg" alt="Advanced Specialty Seals" class="img-fluid rounded-4 shadow">
+                        <img src="catalog/4_Advanced_Specialty_Seals/specialty-seal-multi-type-collection-001.jpg"
+                            alt="Advanced Specialty Seals" class="img-fluid rounded-4 shadow">
                     </div>
                     <div class="col-md-6 pe-md-5">
                         <h3 class="h2 fw-bold mb-3">Advanced Specialty Seals</h3>
-                        <p class="text-secondary mb-4">For extreme conditions including high pressure, corrosive chemicals, or unique machinery designs. Our specialty range includes wave spring and heavy-duty custom solutions.</p>
-                        <a href="Advanced_specialty_seals.html" class="btn btn-primary rounded-pill px-4">View Collection</a>
+                        <p class="text-secondary mb-4">For extreme conditions including high pressure, corrosive
+                            chemicals, or unique machinery designs. Our specialty range includes wave spring and
+                            heavy-duty custom solutions.</p>
+                        <a href="Advanced_specialty_seals.html" class="btn btn-primary rounded-pill px-4">View
+                            Collection</a>
                     </div>
                 </div>
             </div>
@@ -178,15 +212,22 @@
 
     <footer class="bg-light text-dark py-5 mt-5 border-top border-dark border-opacity-10">
         <div class="container text-center">
-            <div class="mb-4  d-inline-block rounded p-1"><img src="logo.svg" alt="Hindustan Seal" style="height: 50px;"></div>
+            <div class="mb-4  d-inline-block rounded p-1"><img src="logo.svg" alt="Hindustan Seal"
+                    style="height: 50px;"></div>
             <ul class="list-inline mb-4">
-                <li class="list-inline-item"><a href="index.html" class="text-dark text-decoration-none px-2 small link-primary">Home</a></li>
-                <li class="list-inline-item"><a href="selector.html" class="text-dark text-decoration-none px-2 small link-primary">Selector</a></li>
-                <li class="list-inline-item"><a href="product.html" class="text-dark text-decoration-none px-2 small link-primary">Products</a></li>
-                <li class="list-inline-item"><a href="contact.html" class="text-dark text-decoration-none px-2 small link-primary">Contact</a></li>
-                <li class="list-inline-item"><a href="#" class="text-dark text-decoration-none px-2 small link-primary">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="index.html"
+                        class="text-dark text-decoration-none px-2 small link-primary">Home</a></li>
+                <li class="list-inline-item"><a href="selector.html"
+                        class="text-dark text-decoration-none px-2 small link-primary">Selector</a></li>
+                <li class="list-inline-item"><a href="product.html"
+                        class="text-dark text-decoration-none px-2 small link-primary">Products</a></li>
+                <li class="list-inline-item"><a href="contact.html"
+                        class="text-dark text-decoration-none px-2 small link-primary">Contact</a></li>
+                <li class="list-inline-item"><a href="#"
+                        class="text-dark text-decoration-none px-2 small link-primary">Privacy Policy</a></li>
             </ul>
-            <p class="small mb-2">Gala No. 106, Ashirwad Industrial Estate No. 3, Ram Mandir Road, Goregaon (W), Mumbai. 400104.</p>
+            <p class="small mb-2">Gala No. 106, Ashirwad Industrial Estate No. 3, Ram Mandir Road, Goregaon (W), Mumbai.
+                400104.</p>
             <p class="small mb-4">Mobile: +91 9892168200 / 7021153758 | E-mail: hindustanseal@gmail.com</p>
             <div class="border-top border-secondary border-opacity-10 pt-4 mt-4">
                 <p class="small mb-0">&copy; 2026 Hindustan Seal. All rights reserved.</p>
@@ -197,71 +238,71 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="catalog_data.js"></script>
     <script>
-    // 1. Hero Background Slider
-    document.addEventListener('DOMContentLoaded', () => {
-        const slider = document.getElementById('hero-slider');
-        if (!slider) return;
+        // 1. Hero Background Slider
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('hero-slider');
+            if (!slider) return;
 
-        const slideshowImages = [
-            'images/dams/dam_top.jpg',
-            'images/waterpump_worker/001.jpg',
-            'images/dams/dam_right.jpg',
-            'images/waterpumphouse/waterpump.jpg',
-            'images/waterpump_worker/002.jpg',
-            'images/waterpumphouse/waterpump2.jpg',
-            'images/waterpump_worker/003.jpg',
-            
-        ];
+            const slideshowImages = [
+                'images/dams/dam_top.jpg',
+                'images/waterpump_worker/001.jpg',
+                'images/dams/dam_right.jpg',
+                'images/waterpumphouse/waterpump.jpg',
+                'images/waterpump_worker/002.jpg',
+                'images/waterpumphouse/waterpump2.jpg',
+                'images/waterpump_worker/003.jpg',
 
-        let currentSlide = 0;
-        const slides = [];
+            ];
 
-        slideshowImages.forEach((src, idx) => {
-            const slide = document.createElement('div');
-            slide.className = 'hero-slide';
-            slide.style.backgroundImage = `url('${src}')`;
-            if (idx === 0) slide.classList.add('active');
-            slider.appendChild(slide);
-            slides.push(slide);
-        });
+            let currentSlide = 0;
+            const slides = [];
 
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 5000);
-    });
-
-    // 2. Enhanced Gear Scroll Interaction
-    const track = document.getElementById('gear-root');
-    const wrap = document.getElementById('gear-wrap');
-    const cards = document.querySelectorAll('.gcard');
-
-    if (track && wrap) {
-        window.addEventListener('scroll', () => {
-            const rect = track.getBoundingClientRect();
-            const scrollHeight = track.offsetHeight - window.innerHeight;
-            
-            // Calculate progress (0 to 1) 
-            let progress = Math.max(0, Math.min(1, -rect.top / scrollHeight));
-            
-            // Smooth gear rotation (360 degrees for full scroll)
-            wrap.style.transform = `translateX(-50%) rotate(${progress * 360}deg)`;
-
-            // Determine active card based on scroll thresholds
-            const step = 1 / cards.length;
-            cards.forEach((card, i) => {
-                const start = i * step;
-                const end = (i + 1) * step;
-                
-                if (progress >= start && progress < end) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
-                }
+            slideshowImages.forEach((src, idx) => {
+                const slide = document.createElement('div');
+                slide.className = 'hero-slide';
+                slide.style.backgroundImage = `url('${src}')`;
+                if (idx === 0) slide.classList.add('active');
+                slider.appendChild(slide);
+                slides.push(slide);
             });
+
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000);
         });
-    }
+
+        // 2. Enhanced Gear Scroll Interaction
+        const track = document.getElementById('gear-root');
+        const wrap = document.getElementById('gear-wrap');
+        const cards = document.querySelectorAll('.gcard');
+
+        if (track && wrap) {
+            window.addEventListener('scroll', () => {
+                const rect = track.getBoundingClientRect();
+                const scrollHeight = track.offsetHeight - window.innerHeight;
+
+                // Calculate progress (0 to 1) 
+                let progress = Math.max(0, Math.min(1, -rect.top / scrollHeight));
+
+                // Smooth gear rotation (360 degrees for full scroll)
+                wrap.style.transform = `translateX(-50%) rotate(${progress * 360}deg)`;
+
+                // Determine active card based on scroll thresholds
+                const step = 1 / cards.length;
+                cards.forEach((card, i) => {
+                    const start = i * step;
+                    const end = (i + 1) * step;
+
+                    if (progress >= start && progress < end) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+            });
+        }
     </script>
     <script src="main.js"></script>
 </body>

@@ -5,13 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Sticky Navbar Effect on Scroll (Glassy Transition)
   const isHeroPage = !!document.getElementById('hero');
+  const hasSlider = !!document.getElementById('hero-slider');
   const brand = nav.querySelector('.navbar-brand');
+
+  if (hasSlider) nav.classList.add('has-slider');
 
   const updateNavbar = () => {
     const isScrolled = window.scrollY > 150;
     
     if (isScrolled) {
       nav.classList.add('py-1');
+      nav.classList.add('scrolled');
       nav.style.backgroundColor = 'rgba(240, 253, 250, 0.92)'; /* Mint/Teal tinted white */
       nav.style.backdropFilter = 'blur(15px)';
       nav.style.boxShadow = '0 10px 15px -10px rgba(6, 212, 126, 0.1)';
@@ -22,8 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else {
       nav.classList.remove('py-1');
-      nav.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
-      nav.style.backdropFilter = 'blur(25px)';
+      nav.classList.remove('scrolled');
+      
+      // If we have a slider, keep it transparent initially
+      if (hasSlider) {
+        nav.style.backgroundColor = 'transparent';
+        nav.style.backdropFilter = 'none';
+      } else {
+        nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        nav.style.backdropFilter = 'blur(25px)';
+      }
+      
       nav.style.boxShadow = 'none';
       // Only hide brand if we are on a hero page
       if (brand && isHeroPage) {
