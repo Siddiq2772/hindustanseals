@@ -253,26 +253,31 @@
                 'images/waterpump_worker/002.jpg',
                 'images/waterpumphouse/waterpump2.jpg',
                 'images/waterpump_worker/003.jpg',
-
             ];
 
-            let currentSlide = 0;
-            const slides = [];
+            // Create a track for sliding
+            const track = document.createElement('div');
+            track.id = 'hero-slider-track';
+            slider.appendChild(track);
 
+            const slides = [];
             slideshowImages.forEach((src, idx) => {
                 const slide = document.createElement('div');
                 slide.className = 'hero-slide';
                 slide.style.backgroundImage = `url('${src}')`;
-                if (idx === 0) slide.classList.add('active');
-                slider.appendChild(slide);
+                track.appendChild(slide);
                 slides.push(slide);
             });
 
-            setInterval(() => {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }, 5000);
+            let currentSlide = 0;
+            const totalSlides = slideshowImages.length;
+
+            const nextSlide = () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            };
+
+            setInterval(nextSlide, 3000);
         });
 
         // 2. Enhanced Gear Scroll Interaction
