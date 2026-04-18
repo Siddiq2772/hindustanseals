@@ -17,14 +17,29 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html" style="padding:0; border:none; background:none;"><img
-                    src="logo.svg" alt="Hindustan Seal"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transition-all">
+        <div class="container d-flex flex-column">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="index.html" style="padding:0; border:none; background:none;">
+                    <img src="logo.svg" alt="Hindustan Seal">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Branding Component (Integrated into Nav) -->
+            <div class="d-lg-none w-100 mt-2 pb-2 text-center border-top border-white border-opacity-10 mobile-nav-branding">
+                <p class="text-white opacity-75 my-2" style="font-size: 0.75rem;">
+                    Manufacturer of Mechanical Seal for All types of Mechanical Seal.
+                </p>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="selector.html" class="btn btn-primary rounded-pill" style="font-size: 0.7rem; padding: 0.3rem 0.8rem;">Analyze Matches</a>
+                    <a href="product.html" class="btn btn-outline-light rounded-pill" style="font-size: 0.7rem; padding: 0.3rem 0.8rem;">View Catalog</a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse w-100" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="selector.html">Seal Selector</a></li>
@@ -41,8 +56,8 @@
 
     <main class="container-fluid p-0 text-center m-0">
         <section id="hero">
-            <!-- Branding Panel (Top 25% on Desktop) -->
-            <div class="hero-branding">
+            <!-- Branding Panel (Desktop Only) -->
+            <div class="hero-branding d-none d-lg-block">
                 <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-start">
                     <img src="logo-white.svg" alt="Hindustan Seal" class="hero-logo d-none d-lg-block">
                     
