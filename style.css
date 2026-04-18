@@ -139,6 +139,7 @@ body::before {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0.45rem 1rem; /* Reduced from default */
+  top: 0;
 }
 
 @media (max-width: 991px) {
@@ -149,13 +150,13 @@ body::before {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(13, 148, 136, 0.1);
+    border: none !important;
   }
 
   /* Match homepage light theme for mobile menu */
   .navbar.has-slider:not(.scrolled) .navbar-collapse {
     background: var(--theme-color) !important;
-    border: 1px solid rgba(13, 148, 136, 0.1);
+    border: none !important;
   }
 }
 
@@ -191,6 +192,7 @@ body::before {
   margin: 0 !important;
   border: none !important;
   pointer-events: none;
+  transform: translateY(-20px);
 }
 
 .navbar-light .nav-link {
@@ -206,9 +208,11 @@ body::before {
 }
 
 @media (max-width: 991px) {
-  .navbar.has-slider:not(.scrolled) {
-    background: var(--theme-color) !important; 
-    backdrop-filter: blur(12px) !important;
+  .navbar.fixed-top:not(.scrolled) {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    background: var(--theme-gradient) !important;
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.1);
   }
 }
 
@@ -228,7 +232,9 @@ body::before {
 
 .navbar.fixed-top.scrolled {
     background: var(--theme-gradient) !important;
-    border-bottom: 2px solid var(--bs-primary);
+    border-bottom: none !important;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft shadow instead of border */
 }
 
 .navbar.has-slider:not(.scrolled) .btn-outline-light {
@@ -238,7 +244,7 @@ body::before {
 
 @media (max-width: 991px) {
   .navbar.has-slider:not(.scrolled) .navbar-toggler {
-    border-color: var(--bs-body-color) !important;
+    border-color: transparent !important;
   }
   .navbar.has-slider:not(.scrolled) .navbar-toggler-icon {
     filter: brightness(0) !important; /* Make sure it's dark */

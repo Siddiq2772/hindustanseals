@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const brand = nav.querySelector('.navbar-brand');
 
   if (hasSlider) nav.classList.add('has-slider');
-
+  
   const updateNavbar = () => {
-    const isScrolled = window.scrollY > 150;
+    const currentScrollY = window.scrollY;
+    const isScrolled = currentScrollY > 150;
     const brandImg = brand ? brand.querySelector('img') : null;
     
     if (isScrolled) {
