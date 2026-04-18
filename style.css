@@ -1,16 +1,22 @@
 /* Hindustan Seal - Bootstrap Enhancements */
 :root {
-  --bs-primary: #06d47ece; /* Vibrant Light Cyan/Green-ish Skyblue */
-  --bs-primary-rgb: 6, 182, 212;
+  --theme-color: rgba(240, 253, 250, 0.92);
+  --theme-gradient: linear-gradient(135deg, rgba(240, 253, 250, 1) 0%, rgba(204, 251, 241, 0.95) 100%);
+  --bs-primary: #0d9488; /* Premium Teal-600 */
+  --bs-primary-rgb: 13, 148, 136;
   --logo-red: #e31e24;
-  --bs-body-bg: #f8fafc; /* Light Slate BG */
-  --bs-body-color: #0f172a; /* Dark Slate Text */
-  --card-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(0, 0, 0, 0.05);
+  --bs-body-bg: #f0fdfa; /* Mint Slate BG */
+  --bs-body-color: #134e4a; /* Darker Teal Text */
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(13, 148, 136, 0.1);
 }
 
 .text-secondary {
-    color: #475569 !important; /* Darker slate for readability */
+    color: #334155 !important; /* Dark slate for readability */
+}
+
+.bg-light {
+    background: var(--theme-gradient) !important;
 }
 
 body {
@@ -94,16 +100,16 @@ h1, h2, h3, h4, .navbar-brand {
 
 
 #hero .text-dark {
-  color: #fff !important;
+  color: var(--bs-body-color) !important;
 }
 
 #hero .text-dark.opacity-75 {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(19, 78, 74, 0.8) !important;
 }
 
 #hero .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
+  border-color: rgba(13, 148, 136, 0.3);
+  color: var(--bs-primary);
 }
 
 #hero .btn-outline-light:hover {
@@ -120,8 +126,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.08), transparent 40%),
-              radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.05), transparent 40%);
+  background: radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.05), transparent 40%),
+              radial-gradient(circle at 20% 80%, rgba(13, 148, 136, 0.03), transparent 40%);
   z-index: -1;
 }
 
@@ -135,17 +141,19 @@ body::before {
 
 @media (max-width: 991px) {
   .navbar-collapse {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--theme-color);
+    backdrop-filter: blur(15px);
     margin-top: 15px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(13, 148, 136, 0.1);
   }
 
-  /* Match homepage dark theme for mobile menu */
+  /* Match homepage light theme for mobile menu */
   .navbar.has-slider:not(.scrolled) .navbar-collapse {
-    background: #0f172a !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--theme-color) !important;
+    border: 1px solid rgba(13, 148, 136, 0.1);
   }
 }
 
@@ -188,7 +196,7 @@ body::before {
   font-weight: 500;
 }
 
-/* Translucent Home Page Header - Initially White Text */
+/* Translucent Home Page Header */
 .navbar.has-slider:not(.scrolled) {
   border-bottom: none !important;
   backdrop-filter: none !important;
@@ -197,36 +205,41 @@ body::before {
 
 @media (max-width: 991px) {
   .navbar.has-slider:not(.scrolled) {
-    background: rgba(15, 23, 42, 0.9) !important; /* Dark Opaque theme */
+    background: var(--theme-color) !important; 
     backdrop-filter: blur(12px) !important;
   }
 }
 
 .navbar.has-slider:not(.scrolled) .nav-link {
-  color: #fff !important;
+  color: var(--bs-body-color) !important;
 }
 
 @media (max-width: 991px) {
   .navbar.has-slider:not(.scrolled) .nav-link {
-    color: #fff !important; /* White text for dark bar */
+    color: var(--bs-body-color) !important;
   }
 }
 
-.navbar.has-slider:not(.scrolled) .navbar-toggler-icon {
-  filter: none !important;
+.navbar-light .nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+.navbar.fixed-top.scrolled {
+    background: var(--theme-gradient) !important;
+    border-bottom: 2px solid var(--bs-primary);
 }
 
 .navbar.has-slider:not(.scrolled) .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
+  border-color: rgba(13, 148, 136, 0.3);
+  color: var(--bs-primary);
 }
 
 @media (max-width: 991px) {
   .navbar.has-slider:not(.scrolled) .navbar-toggler {
-    border-color: #fff !important;
+    border-color: var(--bs-body-color) !important;
   }
   .navbar.has-slider:not(.scrolled) .navbar-toggler-icon {
-    filter: invert(1) brightness(100%) !important;
+    filter: brightness(0) !important; /* Make sure it's dark */
   }
 }
 
@@ -259,19 +272,19 @@ body::before {
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.05), 0 2px 4px -1px rgba(13, 148, 136, 0.03);
 }
 
 .card:hover {
   border-color: var(--bs-primary);
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: rgba(240, 253, 250, 0.98);
+  box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.1), 0 10px 10px -5px rgba(13, 148, 136, 0.04);
 }
 
 /* Text Gradients */
 .gradient-text {
-  background: linear-gradient(to right, #0f172a, #334155);
+  background: linear-gradient(to right, #134e4a, #0d9488);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -302,8 +315,8 @@ body::before {
 }
 
 .btn-primary:hover {
-  background-color: #0891b2;
-  border-color: #0891b2;
+  background-color: #0f766e;
+  border-color: #0f766e;
 }
 
 /* Hero Slideshow Background */
@@ -325,9 +338,6 @@ body::before {
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75) saturate(1.1);
-  background-color: rgba(0, 0, 0, 0.2);
-  background-blend-mode: multiply;
   position: relative;
 }
 
@@ -342,6 +352,7 @@ body::before {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  background-color: var(--theme-color);
 }
 
 /* New Split Layout: Desktop Only (992px+) */
@@ -361,8 +372,7 @@ body::before {
     justify-content: space-between;
     align-items: flex-start;
     padding: 4rem 0 2rem 0;
-    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
-    border-bottom: 2px solid var(--bs-primary);
+    background: var(--theme-gradient);
   }
 
   .hero-logo {
@@ -396,8 +406,7 @@ body::before {
   .hero-branding {
     z-index: 20;
     width: 100%;
-    /* Matching the dark theme of the navbar */
-    background: #0f172a; 
+    background: var(--theme-gradient); 
     padding: 2rem 0;
     text-align: center;
   }
@@ -467,15 +476,16 @@ body::before {
 
 .gcard {
   position: absolute;
-  background: rgba(255, 255, 255, 0.84);
+  background: var(--theme-color);
   backdrop-filter: blur(12px); /* Adds a modern frosted look */
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  color: #1e293b;
+  border: 1px solid rgba(13, 148, 136, 0.2);
+  color: var(--bs-body-color);
   padding: 30px;
   border-radius: 20px;
   width: 90%;
   max-width: 360px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(13, 148, 136, 0.1);
   
   /* Initial State: Dropped back and invisible */
   opacity: 0;

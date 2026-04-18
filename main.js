@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isScrolled) {
       nav.classList.add('py-1');
       nav.classList.add('scrolled');
-      nav.style.backgroundColor = 'rgba(240, 253, 250, 0.92)'; /* Mint/Teal tinted white */
+      nav.style.background = 'linear-gradient(135deg, rgba(240, 253, 250, 1) 0%, rgba(204, 251, 241, 0.95) 100%)'; /* Mint/Teal gradient */
       nav.style.backdropFilter = 'blur(15px)';
-      nav.style.boxShadow = '0 10px 15px -10px rgba(6, 212, 126, 0.1)';
-      if (brandImg && isHeroPage) brandImg.src = 'logo.svg';
+      nav.style.boxShadow = '0 10px 15px -10px rgba(13, 148, 136, 0.1)';
+      if (brandImg) brandImg.src = 'logo.svg';
       if (brand) {
         brand.style.opacity = '1';
         brand.style.pointerEvents = 'auto';
@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (hasSlider) {
         nav.style.backgroundColor = 'transparent';
         nav.style.backdropFilter = 'none';
-        if (brandImg) brandImg.src = 'logo-white.svg';
+        if (brandImg) brandImg.src = 'logo.svg';
       } else {
-        nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        nav.style.background = 'linear-gradient(135deg, rgba(240, 253, 250, 1) 0%, rgba(204, 251, 241, 0.95) 100%)';
         nav.style.backdropFilter = 'blur(25px)';
         if (brandImg) brandImg.src = 'logo.svg';
       }
