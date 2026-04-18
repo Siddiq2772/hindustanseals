@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&amp;family=Inter:wght@700&amp;display=swap');
-    .title { font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 50px; fill: #007a3e; letter-spacing: 0.01em; }
+    .title { font-family: 'Archivo', sans-serif; font-weight: 650; font-size: 50px; fill: #007a3e; letter-spacing: 0.01em; }
     /* Increased font-size to 14px */
-    .sub { font-family: 'Inter', sans-serif; font-weight: 750; font-size: 14px; fill: #ffffff; letter-spacing: 0.05em; }
+    .sub { font-family: 'Inter', sans-serif; font-weight: 550; font-size: 14px; fill: #ffffff; letter-spacing: 0.05em; }
     .line { stroke: #e31e24; stroke-width: 2.5; }
   </style>
   
