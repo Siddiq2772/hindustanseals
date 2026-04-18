@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateNavbar = () => {
     const isScrolled = window.scrollY > 150;
+    const brandImg = brand ? brand.querySelector('img') : null;
     
     if (isScrolled) {
       nav.classList.add('py-1');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.style.backgroundColor = 'rgba(240, 253, 250, 0.92)'; /* Mint/Teal tinted white */
       nav.style.backdropFilter = 'blur(15px)';
       nav.style.boxShadow = '0 10px 15px -10px rgba(6, 212, 126, 0.1)';
+      if (brandImg && isHeroPage) brandImg.src = 'logo.svg';
       if (brand) {
         brand.style.opacity = '1';
         brand.style.pointerEvents = 'auto';
@@ -32,20 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
       if (hasSlider) {
         nav.style.backgroundColor = 'transparent';
         nav.style.backdropFilter = 'none';
+        if (brandImg) brandImg.src = 'logo-white.svg';
       } else {
         nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
         nav.style.backdropFilter = 'blur(25px)';
+        if (brandImg) brandImg.src = 'logo.svg';
       }
       
       nav.style.boxShadow = 'none';
-      // Only hide brand if we are on a hero page
-      if (brand && isHeroPage) {
+      // Only hide brand on desktop if we are on a hero page
+      const isDesktop = window.innerWidth >= 992;
+      if (brand && isHeroPage && isDesktop) {
         brand.style.opacity = '0';
         brand.style.pointerEvents = 'none';
         brand.style.transform = 'translateY(-10px)';
       } else if (brand) {
         brand.style.opacity = '1';
         brand.style.pointerEvents = 'auto';
+        brand.style.transform = 'translateY(0)';
       }
     }
   };
