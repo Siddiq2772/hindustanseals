@@ -28,9 +28,6 @@
 
             <!-- Mobile Branding Component (Integrated into Nav) -->
             <div class="d-lg-none w-100 mt-2 pb-2 text-center border-top border-dark border-opacity-10 mobile-nav-branding order-2">
-                <p class="text-dark opacity-75 my-2" style="font-size: 0.75rem;">
-                    Manufacturer of Mechanical Seal for All types of Mechanical Seal.
-                </p>
                 <div class="d-flex justify-content-center gap-2">
                     <a href="selector.html" class="btn btn-primary rounded-pill" style="font-size: 0.7rem; padding: 0.3rem 0.8rem;">Analyze Matches</a>
                     <a href="product.html" class="btn btn-outline-light rounded-pill" style="font-size: 0.7rem; padding: 0.3rem 0.8rem;">View Catalog</a>
@@ -55,25 +52,53 @@
     <main class="container-fluid p-0 text-center m-0">
         <section id="hero">
             <!-- Branding Panel (Desktop Only) -->
-            <div class="hero-branding d-none d-lg-block">
+            <!-- <div class="hero-branding d-none d-lg-block">
                 <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-start">
-                    <img src="logo.svg" alt="Hindustan Seal" class="hero-logo d-none d-lg-block">
-                    
                     <div class="branding-content d-flex flex-column align-items-center align-items-lg-end w-100 w-lg-auto">
-                        <p class="lead text-dark opacity-75 mb-3 text-center text-lg-end">
-                            Manufacturer of Mechanical Seal for All types of Mechanical Seal.
-                        </p>
+                       
                         <div class="d-flex flex-row flex-wrap justify-content-center justify-content-lg-end gap-3 mt-2 mt-lg-0">
                             <a href="selector.html" class="btn btn-primary px-4 py-2 rounded-pill">Analyze Matches</a>
                             <a href="product.html" class="btn btn-outline-light px-4 py-2 rounded-pill">View Catalog</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             
             <!-- Dynamic Slideshow Background (Bottom 70% on Desktop) -->
-            <div id="hero-slider"></div>
+            <div id="hero-slider">
+                <!-- Product Showcase Carousel Overlay -->
+                <div class="overlay-carousel position-absolute bottom-0 start-0 end-0 mx-2 mx-md-3 mx-lg-4 mb-2 mb-md-3 mb-lg-4 d-flex align-items-center" aria-label="Product Showcase Carousel" role="region" tabindex="0">
+                    <div class="overlay-carousel-viewport overflow-hidden w-100 h-100 position-relative">
+                        <div class="overlay-carousel-track d-flex w-max-content" id="overlay-carousel-track" style="will-change: transform;">
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 1 of 8">
+                                <img src="catalog/1_Single_Spring_Seals/single-spring-seal-stainless-ceramic-face-conical-spring-001.jpg" alt="Single Spring Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 2 of 8">
+                                <img src="catalog/1_Single_Spring_Seals/single-spring-seal-stainless-carbon-face-conical-spring-003.jpg" alt="Single Spring Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 3 of 8">
+                                <img src="catalog/1_Single_Spring_Seals/single-spring-seal-stainless-ceramic-face-conical-spring-002.jpg" alt="Single Spring Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 4 of 8">
+                                <img src="catalog/2_Bellows_Seals/bellows-seal-rubber-bellow-stainless-steel-carbon-face-001.jpg" alt="Rubber Bellows Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 5 of 8">
+                                <img src="catalog/3_Multi_Spring_Seals/multi-spring-seal-stainless-carbon-face-multi-spring-001.jpg" alt="Multi Spring Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 6 of 8">
+                                <img src="catalog/3_Multi_Spring_Seals/multi-spring-seal-stainless-carbon-face-multi-spring-002.jpg" alt="Multi Spring Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 7 of 8">
+                                <img src="catalog/4_Advanced_Specialty_Seals/specialty-seal-multi-type-collection-001.jpg" alt="Specialty Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                            <div class="overlay-slide flex-shrink-0 bg-white bg-opacity-75 border border-primary border-opacity-25 rounded-4 shadow p-2" role="group" aria-label="Product 8 of 8">
+                                <img src="catalog/4_Advanced_Specialty_Seals/specialty-seal-stainless-wave-spring-005.jpg" alt="Wave Spring Seal" class="w-100 h-100 object-fit-cover rounded-3" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Gear Interactive Section -->
@@ -246,13 +271,9 @@
             if (!slider) return;
 
             const slideshowImages = [
-                'images/dams/dam_top.jpg',
-                'images/waterpump_worker/001.jpg',
+               // 'images/dams/dam_top.jpg',
+                //'images/dams/dam_left.jpg',
                 'images/dams/dam_right.jpg',
-                'images/waterpumphouse/waterpump.jpg',
-                'images/waterpump_worker/002.jpg',
-                'images/waterpumphouse/waterpump2.jpg',
-                'images/waterpump_worker/003.jpg',
             ];
 
             // Create a track for sliding
@@ -310,6 +331,100 @@
                 });
             });
         }
+
+        // 3. Seamless Product Showcase Carousel Overlay
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('overlay-carousel-track');
+            const container = document.querySelector('.overlay-carousel');
+            if (!track || !container) return;
+
+            // Carousel configuration variables
+            const CAROUSEL_CONFIG = {
+                speed: 0.6,          // Speed of continuous scroll (pixels per frame)
+                visibleCount: 3,     // Target visible items on desktop
+                direction: 'left'    // Scroll direction: 'left' or 'right'
+            };
+
+            const originalSlides = Array.from(track.children);
+            const N = originalSlides.length;
+
+            // Clone all slides and append to the track to make seamless scrolling possible
+            originalSlides.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                track.appendChild(clone);
+            });
+
+            let posX = 0;
+            let isPaused = false;
+            let isDragging = false;
+            let startX = 0;
+            let currentPosX = 0;
+
+            // Measure the width of one full loop set
+            const getLoopWidth = () => {
+                if (track.children.length > N) {
+                    return track.children[N].offsetLeft - track.children[0].offsetLeft;
+                }
+                return track.scrollWidth / 2;
+            };
+
+            // Main Animation Loop
+            const animate = () => {
+                if (!isPaused && !isDragging) {
+                    const W = getLoopWidth();
+                    if (CAROUSEL_CONFIG.direction === 'left') {
+                        posX -= CAROUSEL_CONFIG.speed;
+                        if (posX <= -W) {
+                            posX += W;
+                        }
+                    } else {
+                        posX += CAROUSEL_CONFIG.speed;
+                        if (posX >= 0) {
+                            posX -= W;
+                        }
+                    }
+                    track.style.transform = `translateX(${posX}px)`;
+                }
+                requestAnimationFrame(animate);
+            };
+
+            // Event Listeners for Interaction
+            container.addEventListener('mouseenter', () => { isPaused = true; });
+            container.addEventListener('mouseleave', () => { isPaused = false; });
+
+            // Keyboard Accessibility & Focus Handling
+            container.addEventListener('focusin', () => { isPaused = true; });
+            container.addEventListener('focusout', () => { isPaused = false; });
+
+
+
+            // Touch support (Swipe/Drag)
+            container.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                currentPosX = posX;
+            }, { passive: true });
+
+            container.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const diffX = e.touches[0].clientX - startX;
+                const W = getLoopWidth();
+                posX = currentPosX + diffX;
+
+                // Handle loop wrapping while dragging
+                if (posX <= -W) posX += W;
+                if (posX > 0) posX -= W;
+
+                track.style.transform = `translateX(${posX}px)`;
+            }, { passive: true });
+
+            container.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            // Start animation loop
+            requestAnimationFrame(animate);
+        });
     </script>
     <script src="main.js"></script>
 </body>

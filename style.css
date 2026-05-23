@@ -50,10 +50,14 @@ h1, h2, h3, h4, .navbar-brand {
 .navbar-brand img {
   height: 52px;
   width: auto;
+  aspect-ratio: 520 / 100;
   transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
+  .navbar-brand {
+    width: auto;
+  }
   .navbar-brand img {
     /* Dynamically adjusts between 48px and 58px based on screen width */
     height: clamp(48px, 14vw, 58px);
@@ -272,6 +276,8 @@ body::before {
   color: var(--bs-primary) !important;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  width: 270px;
 }
 
 /* Premium Card (Extending Bootstrap .card) */
@@ -359,7 +365,7 @@ body::before {
   position: relative;
   overflow: hidden;
   margin: 0;
-  padding: 0;
+  padding-top: 90px;
   background: var(--theme-gradient);
 }
 
@@ -370,7 +376,7 @@ body::before {
     flex-direction: column;
     min-height: 100vh;
     height: auto;
-    padding-top: 40px; /* Space for the fixed navbar */
+    padding-top: clamp(110px, 9vw, 140px); /* Space for the fixed navbar */
   }
 
   .hero-branding {
@@ -384,10 +390,14 @@ body::before {
     background: transparent;
   }
 
-  .hero-logo {
+  .hero-logo,
+  .navbar-brand img {
     height: 81px !important;
     width: auto !important;
     margin-bottom: 0;
+  }
+  .navbar-brand {
+    width: 421px;
   }
 
   .branding-content {
@@ -455,7 +465,7 @@ body::before {
 @media (max-width: 768px) {
   #hero {
     min-height: 70vh !important;
-    padding-top: 100px; /* Accounts for fixed mobile navbar */
+    padding-top: clamp(90px, 14vw, 110px) !important; /* Accounts for fixed mobile navbar */
     padding-bottom: 40px;
   }
 }
@@ -545,4 +555,60 @@ body::before {
   transform: translateX(-50%);
   z-index: 2;
   will-change: transform;
+}
+
+/* Product Showcase Carousel Overlay styling - relying mostly on Bootstrap 5 */
+.overlay-carousel {
+  width: auto !important; /* Stretches to fill start-0 end-0 bounds */
+  height: 210px; /* Increased slightly to prevent clipping shadows */
+  z-index: 100;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.overlay-carousel-track {
+  display: flex;
+  gap: 48px !important; /* Spacious gap between card components */
+  width: max-content;
+  will-change: transform;
+}
+
+.overlay-slide {
+  width: 180px; 
+  height: 180px;
+  backdrop-filter: blur(12px); /* Glassy component effect on each slide */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.overlay-slide:hover {
+  transform: scale(1.08); /* Bounce scale animation */
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 15px 30px rgba(13, 148, 136, 0.25) !important; /* Stronger shadow on hover */
+}
+
+/* Responsive adjustments for widths and sizes */
+@media (max-width: 991px) {
+  .overlay-carousel {
+    height: 170px;
+  }
+  .overlay-carousel-track {
+    gap: 32px !important; /* Slightly smaller gap on tablets */
+  }
+  .overlay-slide {
+    width: 140px; 
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-carousel {
+    height: 140px;
+  }
+  .overlay-carousel-track {
+    gap: 24px !important; /* Smaller gap on mobile */
+  }
+  .overlay-slide {
+    width: 110px; 
+    height: 110px;
+  }
 }

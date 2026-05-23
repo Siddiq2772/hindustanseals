@@ -43,13 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       nav.style.boxShadow = 'none';
-      // Only hide brand on desktop if we are on a hero page
-      const isDesktop = window.innerWidth >= 992;
-      if (brand && isHeroPage && isDesktop) {
-        brand.style.opacity = '0';
-        brand.style.pointerEvents = 'none';
-        brand.style.transform = 'translateY(-10px)';
-      } else if (brand) {
+      if (brand) {
         brand.style.opacity = '1';
         brand.style.pointerEvents = 'auto';
         brand.style.transform = 'translateY(0)';
