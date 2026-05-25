@@ -175,18 +175,26 @@ h1, h2, h3, h4, .navbar-brand {
   color: var(--bs-primary) !important;
   text-transform: uppercase;
   line-height: 1;
+  transition: all 0.3s ease !important;
 }
 
 .navbar-brand img {
-  height: 52px;
+  height: 68px; /* 30% bigger than 52px */
   width: auto;
   aspect-ratio: 520 / 100;
   transition: all 0.3s ease;
 }
 
+.navbar.scrolled .navbar-brand img {
+  height: 52px; /* Revert to standard size when scrolled */
+}
+
 @media (max-width: 768px) {
-  .navbar-brand img {
-    height: clamp(48px, 14vw, 58px);
+  .navbar:not(.scrolled) .navbar-brand img {
+    height: calc(clamp(48px, 14vw, 58px) * 1.30) !important;
+  }
+  .navbar.scrolled .navbar-brand img {
+    height: clamp(48px, 14vw, 58px) !important;
   }
 }
 
@@ -339,7 +347,13 @@ body::before {
   letter-spacing: -0.01em;
   color: var(--bs-primary) !important;
   display: flex; flex-direction: column;
-  flex-shrink: 0; width: 270px;
+  flex-shrink: 0; 
+  width: 352px; /* Not scrolled default width */
+  transition: all 0.3s ease !important;
+}
+
+.navbar.scrolled .navbar-brand {
+  width: 270px; /* Scrolled width */
 }
 
 .card {
@@ -494,14 +508,24 @@ body.steel-theme .product-badge .badge {
     background: transparent;
   }
 
-  .hero-logo,
-  .navbar-brand img {
+  .hero-logo {
     height: 81px !important;
     width: auto !important;
     margin-bottom: 0;
   }
-  .navbar-brand {
-    width: 421px;
+  .navbar:not(.scrolled) .navbar-brand img {
+    height: 105px !important; /* 30% bigger than 81px */
+    width: auto !important;
+  }
+  .navbar.scrolled .navbar-brand img {
+    height: 81px !important;
+    width: auto !important;
+  }
+  .navbar:not(.scrolled) .navbar-brand {
+    width: 548px !important;
+  }
+  .navbar.scrolled .navbar-brand {
+    width: 421px !important;
   }
 
   .branding-content {
