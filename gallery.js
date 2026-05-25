@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <!-- Premium Image Container -->
                 <div class="gallery-img-wrapper position-relative overflow-hidden" style="aspect-ratio: 1/1;">
-                    <img src="${path}${fileName}" alt="${displayName}" class="card-img-top img-fluid p-4 product-image" style="height: 100%; object-fit: contain;">
+                    <img src="${path}${fileName}" alt="${displayName}" class="card-img-top img-fluid product-image">
                     
                     <!-- Frosted Blur Hover Overlay -->
                     <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 
                 <!-- Product Card Body -->
-                <div class="card-body p-3 d-flex flex-column justify-content-between text-center bg-white bg-opacity-25">
+                <div class="card-body p-3 d-flex flex-column justify-content-between text-center">
                     <div>
                         <h5 class="h6 card-title mb-1 fw-bold text-dark text-truncate-2">${displayName}</h5>
                         <p class="small text-secondary mb-0">High-Precision Seal</p>

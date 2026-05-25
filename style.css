@@ -365,8 +365,8 @@ body::before {
 
 /* Gallery Specific Adjustments & Card Refreshes */
 .gallery-img-wrapper {
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.8) 100%) !important;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.25) !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15) !important;
   overflow: hidden;
   position: relative;
 }
@@ -379,16 +379,20 @@ body.steel-theme .card.product-card {
 
 body.steel-theme .card.product-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  border-color: rgba(44, 62, 80, 0.6) !important;
-  box-shadow: 0 20px 40px rgba(30, 41, 59, 0.15) !important;
+  border-color: rgba(44, 62, 80, 0.4) !important;
+  box-shadow: 0 20px 40px rgba(30, 41, 59, 0.1) !important;
 }
 
 .product-image {
+  mix-blend-mode: multiply;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .card.product-card:hover .product-image {
-  transform: scale(1.1) rotate(1deg) !important;
+  transform: scale(1.08) rotate(1deg) !important;
 }
 
 .gallery-overlay {
