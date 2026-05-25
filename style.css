@@ -363,22 +363,66 @@ body::before {
   -webkit-text-fill-color: transparent;
 }
 
-/* Gallery Specific Adjustments */
+/* Gallery Specific Adjustments & Card Refreshes */
 .gallery-img-wrapper {
-  background: #000;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.8) 100%) !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25) !important;
+  overflow: hidden;
+  position: relative;
+}
+
+body.steel-theme .card.product-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border-radius: 1.2rem !important;
   overflow: hidden;
 }
 
-.gallery-img-wrapper img {
-  transition: transform 0.3s ease;
+body.steel-theme .card.product-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(44, 62, 80, 0.6) !important;
+  box-shadow: 0 20px 40px rgba(30, 41, 59, 0.15) !important;
 }
 
-.card:hover .gallery-img-wrapper img {
-  transform: scale(1.05);
+.product-image {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-.card:hover .gallery-overlay {
+.card.product-card:hover .product-image {
+  transform: scale(1.1) rotate(1deg) !important;
+}
+
+.gallery-overlay {
+  background: rgba(44, 62, 80, 0.45) !important;
+  backdrop-filter: blur(6px) !important;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 5;
+}
+
+.card.product-card:hover .gallery-overlay {
   opacity: 1 !important;
+}
+
+.product-badge .badge {
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  padding: 0.4rem 0.8rem !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.steel-theme .product-badge .badge {
+  background: rgba(44, 62, 80, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.4em; /* Ensures layout stays aligned even with single-line titles */
 }
 
 /* Utility Overrides */
