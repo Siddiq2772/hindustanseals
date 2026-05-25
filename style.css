@@ -424,17 +424,10 @@ body::before {
   font-weight: 900;
   letter-spacing: -0.01em;
   color: var(--bs-primary) !important;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  width: 352px;
-  /* Not scrolled default width */
+  display: flex; flex-direction: column;
+  flex-shrink: 0; 
+  flex-grow: 1; /* Stretch to fill space up to toggler */
   transition: all 0.3s ease !important;
-}
-
-.navbar.scrolled .navbar-brand {
-  width: 270px;
-  /* Scrolled width */
 }
 
 .card {
