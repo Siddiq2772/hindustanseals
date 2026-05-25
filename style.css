@@ -176,25 +176,27 @@ h1, h2, h3, h4, .navbar-brand {
   text-transform: uppercase;
   line-height: 1;
   transition: all 0.3s ease !important;
+  max-width: calc(100% - 50px) !important; /* Leave room for toggler on mobile */
 }
 
 .navbar-brand img {
-  height: 68px; /* 30% bigger than 52px */
-  width: auto;
+  max-height: 68px; /* 30% bigger than 52px */
+  width: auto !important;
+  max-width: 100% !important;
   aspect-ratio: 520 / 100;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled .navbar-brand img {
-  height: 52px; /* Revert to standard size when scrolled */
+  max-height: 52px; /* Revert to standard size when scrolled */
 }
 
 @media (max-width: 768px) {
   .navbar:not(.scrolled) .navbar-brand img {
-    height: calc(clamp(48px, 14vw, 58px) * 1.30) !important;
+    max-height: calc(clamp(48px, 14vw, 58px) * 1.30) !important;
   }
   .navbar.scrolled .navbar-brand img {
-    height: clamp(48px, 14vw, 58px) !important;
+    max-height: clamp(48px, 14vw, 58px) !important;
   }
 }
 
@@ -514,11 +516,11 @@ body.steel-theme .product-badge .badge {
     margin-bottom: 0;
   }
   .navbar:not(.scrolled) .navbar-brand img {
-    height: 105px !important; /* 30% bigger than 81px */
+    max-height: 105px !important; /* 30% bigger than 81px */
     width: auto !important;
   }
   .navbar.scrolled .navbar-brand img {
-    height: 81px !important;
+    max-height: 81px !important;
     width: auto !important;
   }
   .navbar:not(.scrolled) .navbar-brand {
