@@ -2,11 +2,14 @@
 :root {
   --theme-color: rgba(248, 250, 252, 0.92);
   --theme-gradient: linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(241, 245, 249, 0.95) 100%);
-  --bs-primary: #334155; /* Slate 700 */
+  --bs-primary: #334155;
+  /* Slate 700 */
   --bs-primary-rgb: 51, 65, 85;
   --logo-red: #e31e24;
-  --bs-body-bg: #f8fafc; /* Slate 50 */
-  --bs-body-color: #1e293b; /* Slate 800 */
+  --bs-body-bg: #f8fafc;
+  /* Slate 50 */
+  --bs-body-color: #1e293b;
+  /* Slate 800 */
   --card-bg: rgba(255, 255, 255, 0.88);
   --glass-border: rgba(51, 65, 85, 0.1);
 }
@@ -15,18 +18,20 @@
 body.steel-theme {
   --theme-color: rgba(210, 219, 229, 0.85);
   --theme-gradient: linear-gradient(135deg, #f1f5f9 0%, #d2dbe5 25%, #a4b7c9 50%, #d2dbe5 75%, #f1f5f9 100%);
-  --bs-primary: #2c3e50; /* Deep steel blue */
+  --bs-primary: #2c3e50;
+  /* Deep steel blue */
   --bs-primary-rgb: 44, 62, 80;
   --bs-body-bg: #d2dbe5;
-  --bs-body-color: #1a252f; /* Deep charcoal */
+  --bs-body-color: #1a252f;
+  /* Deep charcoal */
   --card-bg: rgba(255, 255, 255, 0.65);
   --glass-border: rgba(148, 163, 184, 0.45);
-  
+
   background: var(--theme-gradient) fixed;
 }
 
 body.steel-theme::before {
-  background: 
+  background:
     radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.45), transparent 50%),
     radial-gradient(circle at 20% 80%, rgba(44, 62, 80, 0.15), transparent 50%);
   opacity: 0.9;
@@ -63,20 +68,23 @@ body.steel-theme .card:hover {
 
 /* Golden ratio curved cards for the Key Pillars in About Section */
 body.steel-theme #about .card {
-  border-radius: 1.618rem !important; /* 1.618rem (approx. 26px) based on golden ratio proportions */
+  border-radius: 1.618rem !important;
+  /* 1.618rem (approx. 26px) based on golden ratio proportions */
 }
 
 /* Navbar styling for steel theme */
 body.steel-theme .navbar,
 body.steel-theme .navbar.has-slider:not(.scrolled) {
-  background: rgba(210, 219, 229, 0.5) !important; /* Frosted steel-grey backdrop */
+  background: rgba(210, 219, 229, 0.5) !important;
+  /* Frosted steel-grey backdrop */
   backdrop-filter: blur(15px) !important;
   border-bottom: 1px solid rgba(148, 163, 184, 0.25) !important;
   box-shadow: 0 4px 20px rgba(30, 41, 59, 0.04) !important;
 }
 
 body.steel-theme .navbar.scrolled {
-  background: rgba(210, 219, 229, 0.65) !important; /* Slightly more opaque steel-grey on scroll */
+  background: rgba(210, 219, 229, 0.65) !important;
+  /* Slightly more opaque steel-grey on scroll */
   box-shadow: 0 10px 30px rgba(30, 41, 59, 0.08) !important;
 }
 
@@ -104,13 +112,16 @@ body.steel-theme .navbar .navbar-toggler {
 }
 
 body.steel-theme .navbar .navbar-toggler-icon {
-  filter: brightness(0) saturate(100%) invert(21%) sepia(29%) saturate(986%) hue-rotate(169deg) brightness(92%) contrast(92%) !important; /* Steel color matching --bs-primary */
+  filter: brightness(0) saturate(100%) invert(21%) sepia(29%) saturate(986%) hue-rotate(169deg) brightness(92%) contrast(92%) !important;
+  /* Steel color matching --bs-primary */
 }
 
 @media (max-width: 991px) {
+
   body.steel-theme .navbar-collapse,
   body.steel-theme .navbar.has-slider:not(.scrolled) .navbar-collapse {
-    background: rgba(210, 219, 229, 0.98) !important; /* Frosted steel-grey dropdown for mobile */
+    background: rgba(210, 219, 229, 0.98) !important;
+    /* Frosted steel-grey dropdown for mobile */
     box-shadow: 0 10px 30px rgba(30, 41, 59, 0.1) !important;
     border: 1px solid rgba(148, 163, 184, 0.25) !important;
   }
@@ -119,8 +130,10 @@ body.steel-theme .navbar .navbar-toggler-icon {
 /* Button styling overrides under steel theme */
 body.steel-theme .btn-outline-light {
   border-color: rgba(44, 62, 80, 0.4) !important;
-  color: #2c3e50 !important; /* Steel-blue text color */
-  background: rgba(255, 255, 255, 0.45) !important; /* Frosted glass styling */
+  color: #2c3e50 !important;
+  /* Steel-blue text color */
+  background: rgba(255, 255, 255, 0.45) !important;
+  /* Frosted glass styling */
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
@@ -140,27 +153,35 @@ body.steel-theme footer {
 
 /* Enhance text contrast */
 body.steel-theme .text-secondary {
-  color: #334155 !important; /* Slightly darker slate for better readability on metallic bg */
+  color: #334155 !important;
+  /* Slightly darker slate for better readability on metallic bg */
 }
 
 .text-secondary {
-    color: #475569 !important; /* Slate 600 */
+  color: #475569 !important;
+  /* Slate 600 */
 }
 
 .bg-light {
-    background: var(--theme-gradient) !important;
+  background: var(--theme-gradient) !important;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-body, html {
+
+body,
+html {
   overflow-x: hidden;
   font-size: 90%;
 }
 
-h1, h2, h3, h4, .navbar-brand {
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
   font-family: 'Archivo', sans-serif;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -176,11 +197,13 @@ h1, h2, h3, h4, .navbar-brand {
   text-transform: uppercase;
   line-height: 1;
   transition: all 0.3s ease !important;
-  max-width: calc(100% - 50px) !important; /* Leave room for toggler on mobile */
+  max-width: calc(100% - 70px) !important;
+  /* Leave room for toggler on mobile */
 }
 
 .navbar-brand img {
-  max-height: 68px; /* 30% bigger than 52px */
+  max-height: 68px;
+  /* 30% bigger than 52px */
   width: auto !important;
   max-width: 100% !important;
   aspect-ratio: 520 / 100;
@@ -188,13 +211,15 @@ h1, h2, h3, h4, .navbar-brand {
 }
 
 .navbar.scrolled .navbar-brand img {
-  max-height: 52px; /* Revert to standard size when scrolled */
+  max-height: 52px;
+  /* Revert to standard size when scrolled */
 }
 
 @media (max-width: 768px) {
   .navbar:not(.scrolled) .navbar-brand img {
     max-height: calc(clamp(48px, 14vw, 58px) * 1.30) !important;
   }
+
   .navbar.scrolled .navbar-brand img {
     max-height: clamp(48px, 14vw, 58px) !important;
   }
@@ -219,18 +244,36 @@ h1, h2, h3, h4, .navbar-brand {
   }
 }
 
-.hero-logo:hover { transform: scale(1.05); }
-.navbar-brand:hover img { transform: scale(1.02); }
-.logo-subtext { display: none; }
-.navbar-dark .logo-subtext { color: #fff; filter: grayscale(1) brightness(2); }
+.hero-logo:hover {
+  transform: scale(1.05);
+}
 
-#hero .text-dark { color: var(--bs-body-color) !important; }
-#hero .text-dark.opacity-75 { color: rgba(30, 41, 59, 0.75) !important; }
+.navbar-brand:hover img {
+  transform: scale(1.02);
+}
+
+.logo-subtext {
+  display: none;
+}
+
+.navbar-dark .logo-subtext {
+  color: #fff;
+  filter: grayscale(1) brightness(2);
+}
+
+#hero .text-dark {
+  color: var(--bs-body-color) !important;
+}
+
+#hero .text-dark.opacity-75 {
+  color: rgba(30, 41, 59, 0.75) !important;
+}
 
 #hero .btn-outline-light {
   border-color: rgba(51, 65, 85, 0.25);
   color: var(--bs-primary);
 }
+
 #hero .btn-outline-light:hover {
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
@@ -240,10 +283,12 @@ h1, h2, h3, h4, .navbar-brand {
 body::before {
   content: '';
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(circle at 80% 20%, rgba(51, 65, 85, 0.04), transparent 40%),
-              radial-gradient(circle at 20% 80%, rgba(51, 65, 85, 0.02), transparent 40%);
+    radial-gradient(circle at 20% 80%, rgba(51, 65, 85, 0.02), transparent 40%);
   z-index: -1;
 }
 
@@ -266,6 +311,7 @@ body::before {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
     border: none !important;
   }
+
   .navbar.has-slider:not(.scrolled) .navbar-collapse {
     background: var(--theme-color) !important;
     border: none !important;
@@ -279,8 +325,16 @@ body::before {
   border: 3px solid #000 !important;
   border-radius: 8px;
 }
-.navbar-toggler:focus { box-shadow: none; }
-.navbar-toggler-icon { width: 1.1rem; height: 1.1rem; filter: none !important; }
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  filter: none !important;
+}
 
 .mobile-nav-branding {
   transition: all 0.3s ease-in-out;
@@ -288,14 +342,21 @@ body::before {
   overflow: hidden;
   opacity: 1;
 }
+
 .navbar.scrolled .mobile-nav-branding {
-  max-height: 0; opacity: 0;
-  padding: 0 !important; margin: 0 !important;
-  border: none !important; pointer-events: none;
+  max-height: 0;
+  opacity: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  pointer-events: none;
   transform: translateY(-20px);
 }
 
-.navbar-light .nav-link { color: #475569 !important; font-weight: 500; }
+.navbar-light .nav-link {
+  color: #475569 !important;
+  font-weight: 500;
+}
 
 .navbar.has-slider:not(.scrolled) {
   border-bottom: none !important;
@@ -312,19 +373,25 @@ body::before {
   }
 }
 
-.navbar.has-slider:not(.scrolled) .nav-link { color: var(--bs-body-color) !important; }
-
-@media (max-width: 991px) {
-  .navbar.has-slider:not(.scrolled) .nav-link { color: var(--bs-body-color) !important; }
+.navbar.has-slider:not(.scrolled) .nav-link {
+  color: var(--bs-body-color) !important;
 }
 
-.navbar-light .nav-link:hover { color: var(--bs-primary) !important; }
+@media (max-width: 991px) {
+  .navbar.has-slider:not(.scrolled) .nav-link {
+    color: var(--bs-body-color) !important;
+  }
+}
+
+.navbar-light .nav-link:hover {
+  color: var(--bs-primary) !important;
+}
 
 .navbar.fixed-top.scrolled {
-    background: var(--theme-gradient) !important;
-    border-bottom: none !important;
-    border-radius: 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: var(--theme-gradient) !important;
+  border-bottom: none !important;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .navbar.has-slider:not(.scrolled) .btn-outline-light {
@@ -333,29 +400,41 @@ body::before {
 }
 
 @media (max-width: 991px) {
-  .navbar.has-slider:not(.scrolled) .navbar-toggler { border-color: transparent !important; }
-  .navbar.has-slider:not(.scrolled) .navbar-toggler-icon { filter: brightness(0) !important; }
+  .navbar.has-slider:not(.scrolled) .navbar-toggler {
+    border-color: transparent !important;
+  }
+
+  .navbar.has-slider:not(.scrolled) .navbar-toggler-icon {
+    filter: brightness(0) !important;
+  }
 }
 
-.btn-outline-light { border-color: #cbd5e1; color: #475569; }
+.btn-outline-light {
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
 .btn-outline-light:hover {
-    background-color: var(--bs-primary) !important;
-    border-color: var(--bs-primary) !important;
-    color: white !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: white !important;
 }
 
 .navbar-brand {
   font-weight: 900;
   letter-spacing: -0.01em;
   color: var(--bs-primary) !important;
-  display: flex; flex-direction: column;
-  flex-shrink: 0; 
-  width: 352px; /* Not scrolled default width */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 352px;
+  /* Not scrolled default width */
   transition: all 0.3s ease !important;
 }
 
 .navbar.scrolled .navbar-brand {
-  width: 270px; /* Scrolled width */
+  width: 270px;
+  /* Scrolled width */
 }
 
 .card {
@@ -365,6 +444,7 @@ body::before {
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px -1px rgba(51, 65, 85, 0.05), 0 2px 4px -1px rgba(51, 65, 85, 0.03);
 }
+
 .card:hover {
   border-color: var(--bs-primary);
   transform: translateY(-5px);
@@ -442,12 +522,20 @@ body.steel-theme .product-badge .badge {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.4em; /* Ensures layout stays aligned even with single-line titles */
+  min-height: 2.4em;
+  /* Ensures layout stays aligned even with single-line titles */
 }
 
 /* Utility Overrides */
-.btn-primary { background-color: var(--bs-primary); border-color: var(--bs-primary); }
-.btn-primary:hover { background-color: #1e293b; border-color: #1e293b; }
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: #1e293b;
+  border-color: #1e293b;
+}
 
 /* Hero Slideshow Background */
 #hero-slider {
@@ -477,7 +565,8 @@ body.steel-theme .product-badge .badge {
 }
 
 .hero-slide.active {
-  animation: none; /* Removed Ken Burns for better sliding focus */
+  animation: none;
+  /* Removed Ken Burns for better sliding focus */
 }
 
 #hero {
@@ -496,7 +585,8 @@ body.steel-theme .product-badge .badge {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding-top: clamp(110px, 9vw, 140px); /* Space for the fixed navbar */
+    padding-top: clamp(110px, 9vw, 140px);
+    /* Space for the fixed navbar */
   }
 
   .hero-branding {
@@ -515,17 +605,22 @@ body.steel-theme .product-badge .badge {
     width: auto !important;
     margin-bottom: 0;
   }
+
   .navbar:not(.scrolled) .navbar-brand img {
-    max-height: 105px !important; /* 30% bigger than 81px */
+    max-height: 105px !important;
+    /* 30% bigger than 81px */
     width: auto !important;
   }
+
   .navbar.scrolled .navbar-brand img {
     max-height: 81px !important;
     width: auto !important;
   }
+
   .navbar:not(.scrolled) .navbar-brand {
     width: 548px !important;
   }
+
   .navbar.scrolled .navbar-brand {
     width: 421px !important;
   }
@@ -543,17 +638,18 @@ body.steel-theme .product-badge .badge {
 @media (max-width: 991.98px) {
   #hero {
     display: flex;
-    flex-direction: column; /* Stack branding panel and slider */
+    flex-direction: column;
+    /* Stack branding panel and slider */
   }
 
   .hero-branding {
     z-index: 20;
     width: 100%;
-    background: transparent; 
+    background: transparent;
     padding: 2rem 0;
     text-align: center;
   }
-  
+
   .hero-logo {
     max-width: 80%;
     height: auto;
@@ -562,20 +658,22 @@ body.steel-theme .product-badge .badge {
 }
 
 .branding-content p {
-    font-size: 0.8rem; /* Harmonized size for impact on all devices */
-    font-weight: 500;
-    max-width: 600px;
+  font-size: 0.8rem;
+  /* Harmonized size for impact on all devices */
+  font-weight: 500;
+  max-width: 600px;
 }
 
 .hero-branding .btn {
-    padding: 0.4rem 1rem !important;
-    font-size: 0.80rem;
+  padding: 0.4rem 1rem !important;
+  font-size: 0.80rem;
 }
 
 @media (max-width: 768px) {
   #hero {
     min-height: 70vh !important;
-    padding-top: clamp(90px, 14vw, 110px) !important; /* Accounts for fixed mobile navbar */
+    padding-top: clamp(90px, 14vw, 110px) !important;
+    /* Accounts for fixed mobile navbar */
     padding-bottom: 40px;
   }
 }
@@ -604,16 +702,23 @@ body.steel-theme .product-badge .badge {
 
 #card-area {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 58vh;
-  display: flex; align-items: center; justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
-  perspective: 1000px; /* Enables 3D space */
+  perspective: 1000px;
+  /* Enables 3D space */
 }
 
 .gcard {
   position: absolute;
   background: var(--theme-color);
-  backdrop-filter: blur(12px); /* Adds a modern frosted look */
+  backdrop-filter: blur(12px);
+  /* Adds a modern frosted look */
   border: 1px solid rgba(51, 65, 85, 0.15);
   color: var(--bs-body-color);
   padding: 30px;
@@ -622,16 +727,16 @@ body.steel-theme .product-badge .badge {
   max-width: 360px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(51, 65, 85, 0.08);
-  
+
   /* Initial State: Dropped back and invisible */
   opacity: 0;
   filter: blur(4px);
   transform: translateZ(-100px) translateY(20px) rotateX(-10deg);
-  transition: 
-    opacity 0.6s ease, 
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), 
+  transition:
+    opacity 0.6s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.6s ease;
-  
+
   pointer-events: none;
 }
 
@@ -641,7 +746,8 @@ body.steel-theme .product-badge .badge {
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--bs-primary); /* Match brand accent */
+  color: var(--bs-primary);
+  /* Match brand accent */
 }
 
 .gcard.active {
@@ -669,8 +775,10 @@ body.steel-theme .product-badge .badge {
 
 /* Product Showcase Carousel Overlay styling - relying mostly on Bootstrap 5 */
 .overlay-carousel {
-  width: auto !important; /* Stretches to fill start-0 end-0 bounds */
-  height: 210px; /* Increased slightly to prevent clipping shadows */
+  width: auto !important;
+  /* Stretches to fill start-0 end-0 bounds */
+  height: 210px;
+  /* Increased slightly to prevent clipping shadows */
   z-index: 100;
   user-select: none;
   touch-action: pan-y;
@@ -678,22 +786,26 @@ body.steel-theme .product-badge .badge {
 
 .overlay-carousel-track {
   display: flex;
-  gap: 48px !important; /* Spacious gap between card components */
+  gap: 48px !important;
+  /* Spacious gap between card components */
   width: max-content;
   will-change: transform;
 }
 
 .overlay-slide {
-  width: 180px; 
+  width: 180px;
   height: 180px;
-  backdrop-filter: blur(12px); /* Glassy component effect on each slide */
+  backdrop-filter: blur(12px);
+  /* Glassy component effect on each slide */
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .overlay-slide:hover {
-  transform: scale(1.08); /* Bounce scale animation */
+  transform: scale(1.08);
+  /* Bounce scale animation */
   border-color: var(--bs-primary) !important;
-  box-shadow: 0 15px 30px rgba(51, 65, 85, 0.2) !important; /* Stronger shadow on hover */
+  box-shadow: 0 15px 30px rgba(51, 65, 85, 0.2) !important;
+  /* Stronger shadow on hover */
 }
 
 /* Responsive adjustments for widths and sizes */
@@ -701,11 +813,14 @@ body.steel-theme .product-badge .badge {
   .overlay-carousel {
     height: 170px;
   }
+
   .overlay-carousel-track {
-    gap: 32px !important; /* Slightly smaller gap on tablets */
+    gap: 32px !important;
+    /* Slightly smaller gap on tablets */
   }
+
   .overlay-slide {
-    width: 140px; 
+    width: 140px;
     height: 140px;
   }
 }
@@ -714,11 +829,14 @@ body.steel-theme .product-badge .badge {
   .overlay-carousel {
     height: 140px;
   }
+
   .overlay-carousel-track {
-    gap: 24px !important; /* Smaller gap on mobile */
+    gap: 24px !important;
+    /* Smaller gap on mobile */
   }
+
   .overlay-slide {
-    width: 110px; 
+    width: 110px;
     height: 110px;
   }
 }
@@ -727,9 +845,17 @@ body.steel-theme .product-badge .badge {
 
 /* 1. Moving Steel Gradient Background Shimmer */
 @keyframes steelShimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body.steel-theme {
@@ -740,9 +866,17 @@ body.steel-theme {
 
 /* 2. Floating Parallax Image Effect for About & Product Sections */
 @keyframes floatingImage {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(0.8deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0.8deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 
 body.steel-theme #about img.rounded-4,
@@ -755,12 +889,15 @@ body.steel-theme #product-overview img.rounded-4 {
 body.steel-theme #product-overview .row:nth-of-type(1) img.rounded-4 {
   animation-delay: 0s;
 }
+
 body.steel-theme #product-overview .row:nth-of-type(2) img.rounded-4 {
   animation-delay: -1.5s;
 }
+
 body.steel-theme #product-overview .row:nth-of-type(3) img.rounded-4 {
   animation-delay: -3s;
 }
+
 body.steel-theme #product-overview .row:nth-of-type(4) img.rounded-4 {
   animation-delay: -4.5s;
 }
@@ -774,14 +911,14 @@ body.steel-theme .card {
 body.steel-theme .card::after {
   content: '';
   position: absolute;
-  top: -50%; left: -60%;
-  width: 200%; height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 45%,
-    rgba(255, 255, 255, 0.25) 50%,
-    transparent 55%
-  );
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.25) 50%,
+      transparent 55%);
   transform: rotate(-45deg);
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
@@ -827,13 +964,28 @@ body.steel-theme .badge.bg-primary::before {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background-color: #e31e24; /* Brand accent red */
+  background-color: #e31e24;
+  /* Brand accent red */
   border-radius: 50%;
   animation: badgePulse 2s infinite;
 }
 
 @keyframes badgePulse {
-  0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.7); }
-  70% { transform: scale(1.3); opacity: 0.4; box-shadow: 0 0 0 6px rgba(227, 30, 36, 0); }
-  100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(227, 30, 36, 0); }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.7);
+  }
+
+  70% {
+    transform: scale(1.3);
+    opacity: 0.4;
+    box-shadow: 0 0 0 6px rgba(227, 30, 36, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(227, 30, 36, 0);
+  }
 }
